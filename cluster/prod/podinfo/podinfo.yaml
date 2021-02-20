@@ -25,8 +25,8 @@ spec:
         # nginx.ingress.kubernetes.io/auth-tls-verify-client: "on"
         # nginx.ingress.kubernetes.io/auth-tls-secret: "kube-system/bigcerts-ca-cert"
         # nginx.ingress.kubernetes.io/auth-tls-verify-depth: "1"
-      hosts:
-      - host: podinfo.vnas.fr
-        paths:
-        - path: /
-          pathType: Prefix
+      # hosts:
+      # - host: podinfo.vnas.fr
+      #   paths:
+      #   - path: /
+      #     pathType: Prefix
