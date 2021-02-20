@@ -22,7 +22,7 @@ spec:
         # kubernetes.io/tls-acme: "true"
         # cert-manager.io/cluster-issuer: "letsencrypt-prod"
       hosts:
-      - host: podinfo.vnas.fr
+      - host: "podinfo.vnas.fr"
         paths:
         - path: /
           pathType: Prefix
