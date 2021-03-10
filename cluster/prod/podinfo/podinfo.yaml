@@ -18,15 +18,10 @@ spec:
     ingress:
       enabled: true
       annotations:
-        external-dns.alpha.kubernetes.io/target: 10.20.0.2
+        #external-dns.alpha.kubernetes.io/target: 10.20.0.2
         kubernetes.io/ingress.class: "nginx"
-        nginx.ingress.kubernetes.io/auth-tls-verify-client: "on"
-        nginx.ingress.kubernetes.io/auth-tls-secret: "kube-system/bigcerts-ca-cert"
-        nginx.ingress.kubernetes.io/auth-tls-verify-depth: "1"
-        # nginx.ingress.kubernetes.io/auth-tls-error-page: "http://www.mysite.com/error-cert.html"
-        nginx.ingress.kubernetes.io/auth-tls-pass-certificate-to-upstream: "true"
       hosts:
-      - host: jackett.holthome.net
+      - host: podinfo.vnas.fr
         paths:
         - path: /
           pathType: Prefix
