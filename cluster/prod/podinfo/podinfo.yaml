@@ -17,8 +17,9 @@ spec:
   values:
     ingress:
       enabled: true
-      hosts: ["podinfo.vnas.lab"]
+      hosts: 
+        - podinfo.local
       annotations:
         #external-dns.alpha.kubernetes.io/target: 10.20.0.2
-        kubernetes.io/ingress.class: nginx
+        kubernetes.io/ingress.class: "nginx"
       path: "/"
