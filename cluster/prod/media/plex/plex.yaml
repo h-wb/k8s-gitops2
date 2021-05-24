@@ -20,14 +20,13 @@ spec:
     image:
       repository: plexinc/pms-docker
       tag: beta
-    advertiseIp: "http://10.0.0.101:32400"
+    advertiseIp: "http://10.0.0.201:32400"
     service:
       enabled: true
       type: NodePort
       ports:
         app:
-          port: 80
-          targetPort: 80
+          port: 32400
       protocol: TCP
     # nodeSelector:
     #   app: "nvidia-gpu-plugin"
@@ -39,3 +38,14 @@ spec:
       requests:
         cpu: 763m
         memory: 5009Mi
+    persistence:
+      config:
+        enabled: true
+        existingClaim: plex-config-pvc
+    additionalVolumeMounts:
+    - name: media-nas
+      mountPath: "/data"
+    additionalVolumes:
+    - name: media-nas
+      persistentVolumeClaim:
+        claimName: media-nfs-h-share-pvc
