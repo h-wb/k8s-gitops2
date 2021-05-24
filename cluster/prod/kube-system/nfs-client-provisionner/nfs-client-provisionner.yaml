@@ -24,4 +24,4 @@ spec:
       server: "10.0.0.243"
       path: "/export/hwe"
     storageClass:
-      defaultClass: false
+      defaultClass: true
