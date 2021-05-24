@@ -14,7 +14,7 @@ spec:
   storageClassName: nfs
   nfs:
     server: 10.0.0.243
-    path: "/nas/hugo"
+    path: "/export/hwe"
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
