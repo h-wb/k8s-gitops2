@@ -17,36 +17,35 @@ spec:
         namespace: flux-system
       interval: 5m
   values:
-
     image:
       repository: plexinc/pms-docker
       tag: latest
 
     env:
-      ADVERTISE_IP: "http://10.0.0.201:32400" 
+      ADVERTISE_IP: "http://10.0.0.201:32400"
 
-service:
-  port:
-    port: 32400
-    additionalServices:
-    - enabled: true
-  #   nameSuffix: dnla-tcp
-      type: NodePort
+    service:
       port:
-        port: 32469
-  #     name: dnla-tcp
-        protocol: TCP
-  #     targetPort: 32469
-  #   externalTrafficPolicy: Local
-  # - enabled: true
-  #   nameSuffix: dnla-udp
-  #   type: NodePort
-  #   port:
-  #     port: 1900
-  #     name: dnla-udp
-  #     protocol: UDP
-  #     targetPort: 1900
-  #   externalTrafficPolicy: Local
+        port: 32400
+      additionalServices:
+        - enabled: true
+        #   nameSuffix: dnla-tcp
+          type: NodePort
+          port:
+            port: 32469
+          #     name: dnla-tcp
+            protocol: TCP
+    #     targetPort: 32469
+    #   externalTrafficPolicy: Local
+    # - enabled: true
+    #   nameSuffix: dnla-udp
+    #   type: NodePort
+    #   port:
+    #     port: 1900
+    #     name: dnla-udp
+    #     protocol: UDP
+    #     targetPort: 1900
+    #   externalTrafficPolicy: Local
 
     resources:
       limits:
