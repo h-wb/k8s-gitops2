@@ -32,7 +32,7 @@ spec:
         #   nameSuffix: dnla-tcp
           type: NodePort
           port:
-            port: 32469
+            port: 32400
           #     name: dnla-tcp
             protocol: TCP
     #     targetPort: 32469
@@ -55,7 +55,7 @@ spec:
       requests:
         cpu: 763m
         memory: 5009Mi
-    persistence:
-      config:
-        enabled: true
-        existingClaim: plex-config-pvc
+    # persistence:
+    #   config:
+    #     enabled: true
+    #     existingClaim: plex-config-pvc
