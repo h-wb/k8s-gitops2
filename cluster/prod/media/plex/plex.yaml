@@ -25,27 +25,11 @@ spec:
       ADVERTISE_IP: "http://10.0.0.201:32400"
 
     service:
-      port:
-        port: 32400
-      additionalServices:
-        - enabled: true
-        #   nameSuffix: dnla-tcp
-          type: NodePort
-          port:
+      main:
+        primary: true
+        ports:
+          http:
             port: 32400
-          #     name: dnla-tcp
-            protocol: TCP
-    #     targetPort: 32469
-    #   externalTrafficPolicy: Local
-    # - enabled: true
-    #   nameSuffix: dnla-udp
-    #   type: NodePort
-    #   port:
-    #     port: 1900
-    #     name: dnla-udp
-    #     protocol: UDP
-    #     targetPort: 1900
-    #   externalTrafficPolicy: Local
 
     resources:
       limits:
