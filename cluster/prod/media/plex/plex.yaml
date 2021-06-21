@@ -43,11 +43,3 @@ spec:
       config:
         enabled: true
         existingClaim: plex-config-pvc
-    additionalVolumes:
-    - name: nfs-media-pvc
-      persistentVolumeClaim:
-        claimName: nfs-media-pvc
-    additionalVolumeMounts:
-    - name: nfs-media-pvc
-      mountPath: /data
-      readOnly: false
