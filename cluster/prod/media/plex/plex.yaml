@@ -28,14 +28,14 @@ spec:
 service:
   port:
     port: 32400
-   additionalServices:
-   - enabled: true
+    additionalServices:
+    - enabled: true
   #   nameSuffix: dnla-tcp
-     type: NodePort
-     port:
-       port: 32469
+      type: NodePort
+      port:
+        port: 32469
   #     name: dnla-tcp
-       protocol: TCP
+        protocol: TCP
   #     targetPort: 32469
   #   externalTrafficPolicy: Local
   # - enabled: true
