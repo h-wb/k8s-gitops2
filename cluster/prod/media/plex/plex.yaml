@@ -23,6 +23,7 @@ spec:
 
     env:
       ADVERTISE_IP: "http://10.0.0.201:32400"
+      PLEX_PREFERENCE_1: "FriendlyName=plex-kubernetes"
 
     service:
       main:
@@ -30,6 +31,20 @@ spec:
         ports:
           http:
             port: 32400
+
+    persistence:
+      # config:
+      #   enabled: true
+      #   existingClaim: plex-config-v1
+      # transcode:
+      #   enabled: true
+      #   type: emptyDir
+      #   medium: Memory
+      media:
+        enabled: true
+        existingClaim: nfs-media-pvc
+        mountPath: /media-test
+        readOnly: true
 
     resources:
       limits:
