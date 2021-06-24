@@ -44,7 +44,7 @@ spec:
         enabled: true
         existingClaim: nfs-media-pvc
         mountPath: /media-test
-        readOnly: true
+        # readOnly: true
 
     resources:
       limits:
