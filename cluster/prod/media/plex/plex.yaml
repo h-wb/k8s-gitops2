@@ -40,6 +40,14 @@ spec:
       #   enabled: true
       #   type: emptyDir
       #   medium: Memory
+      transcode:
+        enabled: true
+        type: emptyDir
+        medium: Memory
+      tmp:
+        enabled: true
+        type: emptyDir
+        medium: Memory
       media:
         enabled: true
         existingClaim: nfs-media-pvc
