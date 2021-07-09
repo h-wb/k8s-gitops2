@@ -33,9 +33,9 @@ spec:
             port: 32400
 
     persistence:
-      # config:
-      #   enabled: true
-      #   existingClaim: plex-config-v1
+      config:
+        enabled: true
+        existingClaim: plex-config
       transcode:
         enabled: true
         type: emptyDir
@@ -47,7 +47,7 @@ spec:
       media:
         enabled: true
         existingClaim: nfs-media-pvc
-        mountPath: /media-test
+        mountPath: /data
         # readOnly: true
 
     resources:
@@ -58,7 +58,3 @@ spec:
       requests:
         cpu: 763m
         memory: 5009Mi
-    # persistence:
-    #   config:
-    #     enabled: true
-    #     existingClaim: plex-config-pvc
