@@ -36,10 +36,6 @@ spec:
       # config:
       #   enabled: true
       #   existingClaim: plex-config-v1
-      # transcode:
-      #   enabled: true
-      #   type: emptyDir
-      #   medium: Memory
       transcode:
         enabled: true
         type: emptyDir
