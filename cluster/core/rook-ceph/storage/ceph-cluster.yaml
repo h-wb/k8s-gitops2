@@ -62,4 +62,4 @@ spec:
     useAllDevices: true
     config:
       metadataDevice:
-      osdsPerDevice: "1"
+      osdsPerDevice: "3"
